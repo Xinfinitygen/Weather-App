@@ -17,6 +17,7 @@ body {
     background: #ffffff;
     margin: 100px auto 0;
     border-radius: 20px;
+    padding-bottom: 50px;
 }
 
 /* NAVIGATION BAR Displays the app title. */
@@ -184,13 +185,12 @@ nav {
 }
 
 /* FORECAST SECTION Displays the 5-day weather forecast. */
-.forecast-section {
-    margin-top: 1.5rem;
+/* .forecast-section {
+    
 
-}
+} */
 
 .forecast-section h3 {
-    margin-bottom: 1rem;
     font-size: 1.2rem;
     color: #888;
     padding: 10px;
@@ -213,7 +213,7 @@ nav {
     border: 1px solid #e5e7eb;
     margin: 5px;
     margin-bottom: 0.75rem;
-    padding: 1.5rem;
+    padding: 1rem;
 }
 
 /* Hover transition required by rubric */
