@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Weather-App</title>
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="./styles/styles.css" />
+
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body>
+
+    <!-- MAIN APPLICATION CONTAINER Wraps the entire weather application. -->
+    <div class="card">
+
+        <!-- HEADER SECTION Contains navigation, search controls, loading state, error messages, and search history. -->
+        <header>
+
+            <!-- App Navigation Bar -->
+            <nav>
+                <h1>📱 Weather App</h1>
+            </nav>
+
+            <!-- Search Input and Search Button -->
+            <div class="search-container">
+                <input type="text" id="cityInput" placeholder="Enter city name">
+
+                <button id="searchBtn">
+                    Search
+                </button>
+            </div>
+
+            <!-- Displays search errors such as invalid city names -->
+            <p id="error-message"></p>
+
+            <!-- Loading indicator shown while weather data is being fetched -->
+            <p id="loading">
+                Loading...
+            </p>
+
+            <!-- Stores and displays the user's last 5 searched cities -->
+            <div id="history-container"></div>
+
+        </header>
+
+        <!-- MAIN CONTENT AREA Displays current weather, statistics, and 5-day forecast. -->
+        <main>
+
+            <!--HAND-CODED HERO WEATHER CARD Displays current weather conditions. -->
+            <div class="weather-card">
+
+                <!-- Current weather icon -->
+                <span id="weather-icon" class="sun-animation">☀️</span>
+
+                <!-- City and country -->
+                <h2 id="city-name">
+                    Loading...
+                </h2>
+
+                <!-- Current temperature -->
+                <h1 id="temperature">
+                    --°
+                </h1>
+
+                <!-- Weather description -->
+                <p id="description">
+                    Fetching weather data...
+                </p>
+
+                <!-- °C / °F toggle button that switches temperature units without re-fetching data. -->
+                <div class="unit-toggle">
+                    <button id="unitBtn">Switch to °F</button>
+                </div>
+
+            </div>
+
+            <!--HAND-CODED WEATHER STATISTICS Displays humidity, wind speed, and UV index. -->
+            <div class="weather-stats">
+
+                <div class="stat">
+                    <p class="stat-title">
+                        Humidity
+                    </p>
+
+                    <h3 id="humidity">
+                        <!-- 78% --> --
+                    </h3>
+                </div>
+
+                <div class="stat">
+                    <p class="stat-title">
+                        Wind
+                    </p>
+
+                    <h3 id="wind-speed">
+                        <!-- 14 KM/h --> --
+                    </h3>
+                </div>
+
+                <div class="stat">
+                    <p class="stat-title">
+                        UV Index
+                    </p>
+
+                    <h3 id="uv-index">
+                        <!-- High --> --
+                    </h3>
+                </div>
+
+            </div>
+
+            <!-- 5-DAY FORECAST SECTION Forecast cards are dynamically replaced by JavaScript when weather data is fetched.  -->
+            <section class="forecast-section">
+
+                <h3>
+                    5-Day Forecast
+                </h3>
+
+                <div class="forecast-list">
+
+                    <!-- Sample Forecast Item (used as initial placeholder)HAND-CODED -->
+                    <div class="forecast-item">
+
+                        <span class="day">
+                            Today
+                        </span>
+
+                        <span class="icon">
+                            ☀️
+                        </span>
+
+                        <div class="temp">
+                            <span class="high-temp">
+                                34°
+                            </span>
+
+                            <span class="low-temp">
+                                27°
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <!-- Sample Forecast Item -->
+                    <div class="forecast-item">
+
+                        <span class="day">
+                            Tuesday
+                        </span>
+
+                        <span class="icon">
+                            🌤️
+                        </span>
+
+                        <div class="temp">
+                            <span class="high-temp">
+                                34°
+                            </span>
+
+                            <span class="low-temp">
+                                27°
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <!-- Sample Forecast Item -->
+                    <div class="forecast-item">
+
+                        <span class="day">
+                            Wednesday
+                        </span>
+
+                        <span class="icon">
+                            🌧️
+                        </span>
+
+                        <div class="temp">
+                            <span class="high-temp">
+                                34°
+                            </span>
+
+                            <span class="low-temp">
+                                27°
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <!-- Sample Forecast Item -->
+                    <div class="forecast-item">
+
+                        <span class="day">
+                            Thursday
+                        </span>
+
+                        <span class="icon">
+                            ⛅
+                        </span>
+
+                        <div class="temp">
+                            <span class="high-temp">
+                                34°
+                            </span>
+
+                            <span class="low-temp">
+                                27°
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <!-- Sample Forecast Item -->
+                    <div class="forecast-item">
+
+                        <span class="day">
+                            Friday
+                        </span>
+
+                        <span class="icon">
+                            ☀️
+                        </span>
+
+                        <div class="temp">
+                            <span class="high-temp">
+                                34°
+                            </span>
+
+                            <span class="low-temp">
+                                27°
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- Main JavaScript file -->
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
